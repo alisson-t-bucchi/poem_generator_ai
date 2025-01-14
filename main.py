@@ -4,7 +4,7 @@ import streamlit as st
 
 co = cohere.Client(API_KEY)
 
-st.title("AI Poem generator")
+st.title("🤖 AI Poem generator")
 st.divider()
 
 number_of_lines = st.number_input("Enter number of lines: ")
@@ -25,7 +25,7 @@ try:
     generated_text = response.generations[0].text.strip()
     lines = generated_text.split("\n")
 
-    st.title(f"Your AI poem:")
+    st.title(f"📝 Your AI poem: {theme}")
     st.text(" ")
 
     for line in lines:
